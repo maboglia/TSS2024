@@ -1,6 +1,8 @@
 # TSS2024
 Repo del corso Tecnico Sviluppo Software 2023-2024
 
+Si ricomincia!!!
+
 ---
 
 ## Che cos'è un programma Java
