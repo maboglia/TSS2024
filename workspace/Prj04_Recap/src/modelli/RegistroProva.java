@@ -9,7 +9,7 @@ public class RegistroProva {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		Registro reg1 = new Registro();
-		
+		 
 		Scanner sc = new Scanner(new File("studenti.txt"));
 		int posizione = 0;
 		while(sc.hasNextLine()) {
