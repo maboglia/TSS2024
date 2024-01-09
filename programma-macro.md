@@ -1,3 +1,40 @@
+# Argomenti del corso
+
+1. **Java Standard Edition (SE)**
+2. **Java Development Kit (JDK)**
+3. **Java Virtual Machine (JVM)**
+4. **Java Language Fundamentals**
+5. **Object-Oriented Programming (OOP) in Java**
+6. **Java Building Blocks**
+7. **Operators and Statements**
+8. **Core Java APIs**
+9. **Methods and Encapsulation**
+10. **Class Design**
+11. **Exceptions Handling**
+12. **File Handling in Java**
+13. **Regular Expressions in Java**
+14. **Java Collections Framework**
+15. **Lambda Expressions in Java**
+16. **Functional Interfaces in Java**
+17. **Streams API in Java**
+18. **Concurrency in Java**
+19. **JavaFX (Java Graphic User Interface Toolkit)**
+20. **Java Database Connectivity (JDBC)**
+21. **Servlets and JavaServer Pages (JSP)**
+22. **Spring Framework**
+23. **Hibernate Framework**
+24. **RESTful Web Services in Java**
+25. **Testing in Java (JUnit)**
+26. **Maven Build Tool**
+27. **Version Control with Git**
+28. **Continuous Integration/Continuous Deployment (CI/CD)**
+29. **Web Development with Spring Boot**
+30. **Microservices Architecture in Java**
+
+---
+
+## competenze acquisite durante il percorso
+
 Dopo il corso di Java, gli studenti acquisiranno le seguenti competenze:
 
 1. **Programmazione Orientata agli Oggetti e Fondamenti di Java:**

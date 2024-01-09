@@ -3,132 +3,173 @@ Repo del corso Tecnico Sviluppo Software 2023-2024
 
 ---
 
-## Che cos'è un programma Java
+# Blocchi di Costruzione di Java
 
-* Caratteristiche principali del linguaggio Java
-* Tecnologia Java e ambiente di sviluppo
-* Esecuzione e test di un programma Java
+* Comprendere la Struttura della Classe Java
+  * Campi e Metodi
+  * Commenti
+  * Classi vs File
+* Scrivere un Metodo main()
+* Comprendere le Dichiarazioni di Pacchetto e gli Import
+  * Wildcards
+  * Importazioni Ridondanti
+  * Conflitti di Nomenclatura
+  * Creare un Nuovo Pacchetto
+  * Formattazione del Codice nell'Esame
+* Creare Oggetti
+  * Costruttori
+  * Lettura e Scrittura dei Campi dell'Oggetto
+  * Blocchi di Inizializzazione dell'Istanza
+  * Ordine di Inizializzazione
+* Distinguere tra Riferimenti agli Oggetti e Tipi Primitivi
+  * Tipi Primitivi
+  * Tipi di Riferimento
+  * Differenze Chiave
+* Dichiarare e Inizializzare Variabili
+  * Dichiarare Più Variabili
+* Identificatori
+* Comprendere l'Inizializzazione Predefinita delle Variabili
+  * Variabili Locali
+  * Variabili di Istanza e di Classe
+* Comprendere l'Ambito delle Variabili
+* Ordinare gli Elementi in una Classe
+* Distruggere gli Oggetti
+  * Garbage Collection
+  * finalize()
+* Vantaggi di Java
 
----
+## Operatori e Istruzioni
 
-## Comprensione della tecnologia e dell'ambiente Java
+* Comprendere gli Operatori Java
+* Lavorare con Operatori Aritmetici Binari
+  * Operatori Aritmetici
+  * Promozione Numerica
+* Lavorare con Operatori Unari
+  * Operatori di Complemento Logico e Negazione
+  * Operatori di Incremento e Decremento
+* Usare Operatori Binari Aggiuntivi
+  * Operatori di Assegnazione
+  * Operatori di Assegnazione Composta
+  * Operatori Relazionali
+  * Operatori Logici
+  * Operatori di Uguaglianza
+* Comprendere le Istruzioni Java
+  * L'istruzione if-then
+  * L'istruzione if-then-else
+  * L'istruzione switch
+  * L'istruzione while
+  * L'istruzione do-while
+  * L'istruzione for
+* Comprendere il Controllo di Flusso Avanzato
+  * Cicli Annidati
+  * Aggiunta di Etichette Opzionali
+  * L'istruzione break
+  * L'istruzione continue
 
-* Descrivere la tecnologia Java e l'ambiente di sviluppo Java
-* Identificare le funzionalità chiave del linguaggio Java
-* struttura del **JDK**
-* Java: le basi del linguaggio
-* Introduzione linguaggio Java
-* Introduzione a Java e al processo di compilazione
-* Compilazione ed esecuzione
+## API Core di Java
 
----
+* Creare e Manipolare Stringhe
+  * Concatenazione
+  * Immutabilità
+  * Il Pool di Stringhe
+  * Metodi Importanti delle Stringhe
+  * Concatenazione di Metodi
+* Usare la Classe StringBuilder
+  * Mutabilità e Concatenazione
+  * Creare un StringBuilder
+  * Metodi Importanti di StringBuilder
+  * StringBuilder vs StringBuffer
+* Comprendere l'Uguaglianza
+* Comprendere gli Array Java
+  * Creare un Array di Primitivi
+  * Creare un Array con Variabili di Riferimento
+  * Usare un Array
+  * Ordinare
+  * Ricerca
+  * Varargs
+  * Array Multidimensionali
+* Comprendere un ArrayList
+  * Creare un ArrayList
+  * Usare un ArrayList
+  * Classi Wrapper
+  * Autoboxing
+  * Conversione tra Array e Lista
+  * Ordinamento
+* Lavorare con Date e Orari
+  * Creare Date e Orari
+  * Manipolare Date e Orari
+  * Lavorare con Periodi
+  * Formattare Date e Orari
+  * Analizzare Date e Orari
 
-## Creare una classe main Java
+## Metodi e Incapsulamento
 
-* Classi Java
-* Il metodo main
-* Aggiunta di un metodo main
-* Crea un programma Java eseguibile con una classe main
-* Compilare ed eseguire un programma Java dalla riga di comando
-* Creare e importare pacchetti
-* Primo approccio al codice
-* metodo main e metodi ausiliari
-* Primi programmi Java.
+* Progettare Metodi
+  * Specificatori Opzionali
+  * Tipo di Ritorno
+  * Nome del Metodo
+  * Lista dei Parametri
+  * Lista Opzionale di Eccezioni
+  * Corpo del Metodo
+* Lavorare con Varargs
+* Applicare Modificatori di Accesso
+  * Accesso Privato
+  * Accesso Predefinito (Package Private)
+  * Accesso Protetto
+  * Accesso Pubblico
+  * Progettare Metodi e Campi Statici
+  * Chiamare una Variabile o Metodo Statico
+  * Statico vs Istanza
+  * Variabili Statiche
+  * Inizializzazione Statica
+  * Importazioni Statiche
+* Passare Dati tra i Metodi
+* Sovraccaricare Metodi
+* Creare Costruttori
+  * Costruttore Predefinito
+  * Sovraccaricare i Costruttori
+  * Campi Finali
+  * Ordine di Inizializzazione
+* Incapsulare Dati
+  * Creare Classi Immutabili
+* Scrivere Lambdas Semplici
+  * Esempio di Lambda
+  * Sintassi di Lambda
+  * Predicati
 
----
+## Progettazione di Classe
 
-## Input/Output  
+* Introduzione all'Ereditarietà di Classe
+  * Estendere una Classe
+  * Applicare Modificatori di Accesso di Classe
+  * Creare Oggetti Java
+  * Definire Costruttori
+  * Chiamare Membri di Classe Ereditati
+  * Ereditare Metodi
+  * Ereditare Variabili
+* Creare Classi Astratte
+  * Definire una Classe Astratta
+  * Creare una Classe Concreta
+  * Estendere una Classe Astratta
+* Implementare Interfacce
+  * Definire un'Interfaccia
+  * Ereditare un'Interfaccia
+  * Variabili di Interfaccia
+  * Metodi di Interfaccia Predefiniti
+  * Metodi di Interfaccia Statici
+* Comprendere il Polimorfismo
+  * Oggetto vs Riferimento
+  * Lanciare Oggetti
+  * Metodi Virtuali
+  * Parametri Polimorfici
+  * Polimorfismo e Sovrascrittura del Metodo
 
-* Input/Output utente
-* Input da console, java.util.Scanner
-* Output con oggetto System.out
+## Eccezioni
 
-## Lavorare con i dati
-
-* Presentazione delle variabili
-* Lavorare con le stringhe
-* Lavorare con i numeri
-* Manipolazione dei dati numerici
-
-  **Identificatori e tipi di dato**
-
-* Schema Libero
-* Case sensitive
-* Commenti
-* Regole per gli identificatori
-
----
-
-## Le variabili in java
-
-* Dichiarazione di una variabile:
-* Variabili d'istanza
-* Variabili locali
-* Scope delle variabili
-* Parametri formali
-* Argomenti passati al metodo main
-
----
-
-  **Tipi di dato primitivi**
-
-* Tipi di dati interi, casting e promotion
-* Tipi di dati a virgola mobile, casting e promotion
-* Tipo di dato logico - booleano
-* Tipo di dato primitivo letterale
-
----
-
-## Gestire più elementi
-
-* Lavorare con le condizioni
-* Utilizzo delle istruzioni IF
-* Lavorare con un elenco di elementi
-* Elaborazione di un elenco di elementi
-
----
-
-## Introduzione alla libreria standard
-
-* Il comando import
-* La classe [String](https://github.com/maboglia/CorsoJava/blob/master/appunti/API_Java/021_API_Java_Stringhe.md)
-* La documentazione della libreria standard di Java
-* Cicli finiti, infiniti, annidati
-
----
-
-
-## Strutture condizionali
-
-* Operatori relazionali e condizionali
-* Altri modi per usare i costrutti IF / ELSE
-* Utilizzo delle istruzioni switch
-* Utilizzo del debugger
-
----
-
-## Utilizzo di operatori e [costrutti decisionali](https://github.com/maboglia/CorsoJava/blob/master/appunti/005_cicli.md)
-
-* Utilizzare gli operatori Java incluso l'uso della parentesi per sovrascrivere la precedenza dell'operatore
-* Utilizzare le istruzioni di controllo Java incluso if, else e switch
-* Crea e usa
-  * do...while,
-  * while,
-  * for
-  * foreach,
-  * loop nidificati,
-  * istruzioni break e continue
-
----
-
-## Lavorare con gli [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) in Java
-
-* Gli [array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) in Java
-  * Dichiarazione
-  * Creazione
-  * Inizializzazione
-* [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) **monodimensionali**
-* [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) **bidimensionali**
-* Limiti degli [array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) in JAVA: **dimensione prefissata**
-* **Copia** di [array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md)
-* [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) e [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md)List.
+* Comprendere le Eccezioni
+  * Il Ruolo delle Eccezioni
+  * Comprendere i Tipi di Eccezioni
+  * Lanciare un'Eccezione
+* Usare un'istruzione try
+  * Aggiungere un Blocco finally
+  * Catturare Vari
