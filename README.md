@@ -3,7 +3,7 @@ Repo del corso Tecnico Sviluppo Software 2023-2024
 
 ---
 
-# Blocchi di Costruzione di Java
+## Blocchi di Costruzione di Java
 
 * Comprendere la Struttura della Classe Java
   * Campi e Metodi
@@ -23,7 +23,7 @@ Repo del corso Tecnico Sviluppo Software 2023-2024
   * Ordine di Inizializzazione
 * Distinguere tra Riferimenti agli Oggetti e Tipi Primitivi
   * Tipi Primitivi
-  * Tipi di Riferimento
+  * Tipi Riferimento
   * Differenze Chiave
 * Dichiarare e Inizializzare Variabili
   * Dichiarare Più Variabili
