@@ -1,6 +1,6 @@
 # TSS2024
 Repo del corso Tecnico Sviluppo Software 2023-2024
-aula5
+
 ---
 
 ## Blocchi di Costruzione di Java
