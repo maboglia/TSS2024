@@ -39,6 +39,7 @@ public class Main {
 				System.out.println("Arrivederci");
 				gira = false;
 				break;
+				
 			default:
 				System.out.println("Non ho capito!!!!!!!");
 				break;
