@@ -1,3 +1,5 @@
+![logo](loghi.png)
+
 # Argomenti del corso
 
 1. **Java Standard Edition (SE)**
