@@ -12,3 +12,5 @@ Leonardo,Castaldo,2001
 Best,MBOUAKI,1990
 Alessio,Del Monte,2003
 Eliana,Bove,1989
+Alessandro,Fileccia,1991
+Luminita,Scoarta,1996
