@@ -22,7 +22,7 @@ public class RegistroController {
 
 	public void caricaStudentiDaFile() {
 		
-		File fileDiTesto = new File("studenti.txt");
+		File fileDiTesto = new File("C:\\Users\\teacher\\Desktop\\studenti.txt");
 		
 		try {
 			Scanner input = new Scanner(fileDiTesto);
