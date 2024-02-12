@@ -1,0 +1,4 @@
+Libro [id=1, titolo=Marcovaldo, prezzo=13.0, pagine=204, idEditore=1]
+Libro [id=2, titolo=La coscienza di Zeno, prezzo=14.0, pagine=664, idEditore=2]
+Libro [id=3, titolo=Furore, prezzo=12.5, pagine=478, idEditore=1]
+Libro [id=4, titolo=Il Piccolo Principe, prezzo=10.5, pagine=124, idEditore=1]
