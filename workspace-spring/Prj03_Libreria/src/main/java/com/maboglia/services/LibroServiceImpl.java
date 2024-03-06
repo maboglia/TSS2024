@@ -5,25 +5,24 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.maboglia.entities.Gioco;
-import com.maboglia.repos.GiocoDAO;
+import com.maboglia.entities.Libro;
+import com.maboglia.repos.LibroDAO;
 
 @Service
-public class GiocoServiceImpl implements GiocoService {
+public class LibroServiceImpl implements LibroService {
 
 	@Autowired
-	private GiocoDAO dao;
+	private LibroDAO dao;
 	
 	@Override
-	public List<Gioco> getGiochi() {
-		
+	public List<Libro> getLibri() {
 		return dao.findAll();
 	}
 
 	@Override
-	public void addGioco(Gioco g) {
-		dao.save(g);
-		
+	public Libro addLibro(Libro l) {
+
+		return dao.save(l);
 	}
 
 }
