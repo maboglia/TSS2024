@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<ul id="lista">
+  <li> Item one </li>
+  <li> Item two </li>
+</ul>
+ù
+
+	<script type="text/javascript">
+
+	const URL_SOURCE = 'https://raw.githubusercontent.com/maboglia/ProgrammingResources/master/tabelle/film/top-100-saddest-films-rt.json'
+	const URL_DEST = 'http://localhost:9005/film'
+	fetch(URL_SOURCE)
+		.then(res => res.json())
+		.then(res => {
+			
+			for (const film of res){
+				console.log(film);
+				const LI = document.createElement('li')
+				const LINK = document.createElement('a')
+				LINK.setAttribute('href', 'https://www.google.com/search?q=' + film.titolo + '+film')
+				LINK.setAttribute('target','_blank');
+				LINK.textContent = film.titolo				
+				LI.append(LINK)
+				document.getElementById('lista').append(LI)
+				const obj = {
+						titolo : film.titolo,
+						rating : film.rating.replace('%','')/100,
+						anno : film.anno.replace("(", '').replace(')','')
+				}
+				//postJSON(obj);
+				
+				
+				
+				
+				
+			}
+			
+		})
+		async function postJSON(data) {
+		  try {
+		    const response = await fetch(URL_DEST, {
+		      method: "POST", // or 'PUT'
+		      headers: {
+		        "Content-Type": "application/json",
+		      },
+		      body: JSON.stringify(data),
+		    });
+		
+		    const result = await response.json();
+		    console.log("Success:", result);
+		  } catch (error) {
+		    console.error("Error:", error);
+		  }
+		}
+</script>
+
+</body>
+</html>
