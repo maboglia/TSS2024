@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title th:text="${titolo}">Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${titolo}">Pippo</h1>
+
+	<form action="serie" method="post">
+	
+		<input type="text" name="title" placeholder="title" id="title">
+		<input type="text" name="genre" placeholder="genere" id="genre">
+		<input type="text" name="locandina" placeholder="locandina" id="locandina">
+		<input type="text" name="rating" placeholder="rating" id="rating">
+		<input type="submit" value="Add Serie">
+	</form>
+
+
+	<table>
+		<tr>
+			<th>locandina</th>
+			<th>title</th>
+			<th>rating</th>
+		</tr>
+		<tr th:each="serie : ${elencoSerie}">
+			<td><img src="" th:src="${serie.locandina}"></td>
+			<td th:text="${serie.title}">Row 1: Col 1</td>
+			<td th:text="${serie.rating}">Row 1: Col 2</td>
+		</tr>
+	</table>
+
+<script type="text/javascript">
+
+	const URL = "https://api.tvmaze.com/singlesearch/shows?q=";
+	const TITOLO = document.getElementById('title')
+	
+	TITOLO.onchange = function(){
+		
+		fetch(URL  + TITOLO.value)
+			.then(res => res.json())
+			.then(serie => {
+				document.getElementById('genre').value = serie.genres.join(', ')
+				document.getElementById('rating').value = serie.rating.average
+				document.getElementById('locandina').value = serie.image.medium
+				TITOLO.value = serie.name
+				
+			})
+		
+	}
+	
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

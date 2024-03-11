@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 >Serie TV</h1>
+
+	<form action="serie" method="post">
+	
+		<input type="text" name="title" placeholder="title" id="title">
+		<input type="text" name="genre" placeholder="genere" id="genre">
+		<input type="text" name="locandina" placeholder="locandina" id="locandina">
+		<input type="text" name="rating" placeholder="rating" id="rating">
+		<input type="submit" value="Add Serie">
+	</form>
+
+
+	<table id="tabella">
+		<tr>
+			<th>locandina</th>
+			<th>title</th>
+			<th>rating</th>
+		</tr>
+
+
+	</table>
+
+<script type="text/javascript">
+
+	const URL = "https://api.tvmaze.com/singlesearch/shows?q=";
+	const TITOLO = document.getElementById('title')
+	const URL_SERIE = "http://localhost:9005/api/serie"
+	
+	function reload(){
+		fetch(URL_SERIE)
+			.then(res => res.json())
+			.then(res => {
+				for (const serie of res){
+					const TR = document.createElement('tr')
+					const TD1 = document.createElement('td')
+					const TD2 = document.createElement('td')
+					const TD3 = document.createElement('td')
+					TD1.textContent = serie.locandina
+					TD2.textContent = serie.title
+					TD3.textContent = serie.rating
+					TR.append(TD1, TD2, TD3)
+					document.getElementById('tabella').append(TR)
+					
+				}
+			})
+	}
+	
+	
+	
+	TITOLO.onchange = function(){
+		
+		fetch(URL  + TITOLO.value)
+			.then(res => res.json())
+			.then(serie => {
+				document.getElementById('genre').value = serie.genres.join(', ')
+				document.getElementById('rating').value = serie.rating.average
+				document.getElementById('locandina').value = serie.image.medium
+				TITOLO.value = serie.name
+				
+			})
+		
+	}
+	
+
+	document.body.onload = ()=>reload()
+
+
+
+</script>
+
+
+
+</body>
+</html>
