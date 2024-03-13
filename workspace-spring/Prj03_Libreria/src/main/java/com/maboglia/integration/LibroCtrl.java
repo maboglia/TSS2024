@@ -16,7 +16,7 @@ public class LibroCtrl {
 	@Autowired
 	private LibroService service;
 	
-	@CrossOrigin 
+	//@CrossOrigin 
 	@GetMapping("api/libri")
 	public List<Libro> getLibri(){
 		return service.getLibri();
