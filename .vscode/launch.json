@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<hellospring>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.maboglia.DemoApplication",
+            "projectName": "hellospring",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

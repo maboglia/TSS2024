@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Seleziona regione</h1>
+	
+	<select id="selettoreRegioni" name="regione">
+		<option>Scegli una regione</option>
+		<option th:each="regione : ${regioni}" th:text="${regione}" ></option>
+	</select>
+	
+	<select id="selettoreProvince" name="provincia">
+		<option>Scegli una provincia</option>
+	</select>
+	
+	<button id="btnCerca" disabled>Cerca</button>
+	
+	<div id="output"></div>
+	
+	
+	<script type="text/javascript">
+	
+		const URL = 'api/province/';
+		const TENDINA_REGIONE = document.querySelector('#selettoreRegioni')
+		const TENDINA_PROVINCIA = document.querySelector('#selettoreProvince')
+		const BTN_CERCA = document.querySelector('#btnCerca')
+		const OUTPUT = document.querySelector('#output')
+		
+		
+		BTN_CERCA.onclick = function(){
+			
+			fetch(URL + 'id/' + TENDINA_PROVINCIA.value)
+				.then(res => res.json())
+				.then(provincia => {
+					
+					const  H2 = document.createElement('h2')
+					H2.textContent = provincia.comune
+					OUTPUT.append(H2)
+					
+					const  P = document.createElement('p')
+					P.textContent = 'Maschi: ' + provincia.maschi
+					OUTPUT.append(P)
+					const  PF = document.createElement('p')
+					PF.textContent = 'Femmine: ' + provincia.femmine
+					OUTPUT.append(PF)
+					const  PT = document.createElement('p')
+					PT.textContent = 'Totale: ' + provincia.totale
+					OUTPUT.append(PT)
+					
+					const DIV = document.createElement('div')
+					DIV.style = 'width: 100px; height:30px; border:1px solid #ccc;'
+					
+					const PercMaschi = parseInt(provincia.maschi/provincia.totale*100)
+					const PercFemmine = parseInt(provincia.femmine/provincia.totale*100)
+					const DIV_M = document.createElement('div')
+					DIV_M.style = `position:relative;width: ${PercMaschi}%; height:15px; background-color: red`
+					DIV.append(DIV_M)
+					const DIV_F = document.createElement('div')
+					DIV_F.style = `position:relative;width: ${PercFemmine}%; height:15px; background-color: green`
+					DIV.append(DIV_F)
+										
+					
+					OUTPUT.append(DIV)
+					
+//					console.log(provincia)
+					
+				})
+			
+			
+		}
+		
+		
+		
+		
+		TENDINA_REGIONE.addEventListener('change', function(){
+			
+			const REGIONE = TENDINA_REGIONE.value
+			
+			fetch(URL + REGIONE)
+				.then(res => res.json())
+				.then(province => {
+					TENDINA_PROVINCIA.innerHTML = '<option>Scegli una provincia</option>';
+					for (const p of province){
+						const OPTION = document.createElement('option')
+						OPTION.value = p.id
+						OPTION.textContent = p.comune
+						TENDINA_PROVINCIA.append(OPTION)
+						//console.log(p.comune)
+						
+					}
+					BTN_CERCA.removeAttribute('disabled')
+				})
+			
+			
+		})
+	
+	
+	</script>
+	
+	
+	
+</body>
+</html>
