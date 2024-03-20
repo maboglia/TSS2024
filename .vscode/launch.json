@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Prj06UniversitaApplication",
+            "request": "launch",
+            "mainClass": "com.maboglia.Prj06UniversitaApplication",
+            "projectName": "com.maboglia-universita"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-DemoApplication<hellospring>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
