@@ -31,11 +31,15 @@
 				    <th>Nome Viaggio</th>
 				    <th>Destinazione</th>
 				    <th>Prezzo</th>
+				    <th>Foto</th>
 				  </tr>
 				  <tr th:each="viaggio:${viaggi}">
 				    <td th:text="${viaggio.nomeViaggio}">Row 1: Col 1</td>
 				    <td th:text="${viaggio.destinazione}">Row 1: Col 2</td>
 				    <td th:text="${viaggio.prezzo}">Row 1: Col 2</td>
+				    <td >
+				    	<img th:src="@{'immagini/'+${viaggio.percorsoFile}}">  Row 1: Col 2
+			    	</td>
 				  </tr>
 				</table>
 

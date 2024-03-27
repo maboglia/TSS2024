@@ -15,6 +15,23 @@ public class Viaggio {
 	private String descrizione;
 	private double prezzo;
 	private String destinazione;
+	private String percorsoFile;
+	private int durata;
+	
+	
+	
+	public int getDurata() {
+		return durata;
+	}
+	public void setDurata(int durata) {
+		this.durata = durata;
+	}
+	public String getPercorsoFile() {
+		return percorsoFile;
+	}
+	public void setPercorsoFile(String percorsoFile) {
+		this.percorsoFile = percorsoFile;
+	}
 	public int getId() {
 		return id;
 	}
