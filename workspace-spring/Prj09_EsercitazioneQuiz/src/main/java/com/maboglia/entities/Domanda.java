@@ -2,6 +2,8 @@ package com.maboglia.entities;
 
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,6 +23,7 @@ public class Domanda {
 	private String risposta;
 	private int punteggio;
 	
+	@JsonIgnore
 	@ManyToMany(mappedBy = "domande")
 	private Set<Test> test;
 	

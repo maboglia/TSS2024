@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,17 +29,31 @@ public class QuizREST {
 		return new ResponseEntity<>(service.getPersone(),HttpStatus.OK);
 	}
 	
+	@GetMapping("persone/{id}")
+	public ResponseEntity<Persona> getPersona(@PathVariable int id){
+		return new ResponseEntity<>(service.getPersone().stream().filter(p->p.getId()==id).findFirst().get(),HttpStatus.OK);
+	}
+	
 	@GetMapping("domande")
 	public ResponseEntity<List<Domanda>> getDomande(){
 		return new ResponseEntity<>(service.getDomande(),HttpStatus.OK);
 	}
+	@GetMapping("domande/{id}")
+	public ResponseEntity<Domanda> getDomanda(@PathVariable int id){
+		return new ResponseEntity<>(service.getDomande().stream().filter(p->p.getId()==id).findFirst().get(),HttpStatus.OK);
+	}
+	
 	
 	@GetMapping("test")
 	public ResponseEntity<List<Test>> getTest(){
 		return new ResponseEntity<>(service.getTest(),HttpStatus.OK);
 	}
+	@GetMapping("test/{id}")
+	public ResponseEntity<Test> getTest(@PathVariable int id){
+		return new ResponseEntity<>(service.getTest().stream().filter(p->p.getId()==id).findFirst().get(),HttpStatus.OK);
+	}
 	
-	
+
 	@PostMapping("persone")
 	public ResponseEntity<Persona> addPersone(@RequestBody Persona p){
 		return new ResponseEntity<>(service.addPersona(p),HttpStatus.CREATED);
