@@ -43,6 +43,7 @@ public class PizzeriaServiceImpl implements PizzeriaService {
 					pizza.setDescrizione(p.getDescrizione());
 					pizze.add(pizza);
 					});
+		System.out.println("llllllll");
 		return pizze;
 		
 	}
