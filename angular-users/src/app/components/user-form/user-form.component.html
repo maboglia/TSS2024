@@ -1,0 +1,22 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+
+        <form (submit)="onSubmit()">
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input class="form-control" type="text" [(ngModel)]="user.username" id="username" name="username"
+                    placeholder="Nome utente" #name="ngModel">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" type="text" [(ngModel)]="user.email" id="email" name="email"
+                    placeholder="Email utente" #email="ngModel">
+            </div>
+
+            <button>Add user</button>
+        </form>
+
+    </div>
+</div>
