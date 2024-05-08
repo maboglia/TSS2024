@@ -20,6 +20,10 @@ public class ProvaCollezioni {
 		
 		
 		List<String> parole = new LinkedList<String>(Arrays.asList(note));  //Arrays.asList(note);
+		
+		
+		
+		
 		parole.addAll(List.of("do", "re", "do"));
 		
 		//Collections.sort(parole);
